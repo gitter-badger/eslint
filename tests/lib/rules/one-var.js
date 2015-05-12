@@ -33,6 +33,10 @@ eslintTester.addRuleTest("lib/rules/one-var", {
             args: [2, "never"]
         },
         {
+            code: "for (var i = 0, len = arr.length; i < len; i++) {}",
+            args: [2, "never"]
+        },
+        {
             code: "var bar = true; var baz = false;",
             args: [2, {initialized: "never"}]
         },
